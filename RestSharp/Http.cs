@@ -181,6 +181,10 @@ namespace RestSharp
 		/// Flag to send authorisation header with the HttpWebRequest
 		/// </summary>
 		public bool PreAuthenticate { get; set; }
+        /// <summary>
+        /// Gets or sets the type of decompression that is used.
+        /// </summary>
+        public DecompressionMethods AutomaticDecompression { get; set; }
 
 #if FRAMEWORK || PocketPC
 		/// <summary>

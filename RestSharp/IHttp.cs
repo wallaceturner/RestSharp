@@ -62,6 +62,11 @@ namespace RestSharp
 		byte[] RequestBodyBytes { get; set; }
 
 		Uri Url { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the type of decompression that is used.
+        /// </summary>
+        DecompressionMethods AutomaticDecompression { get; set; }
 
 		HttpWebRequest DeleteAsync(Action<HttpResponse> action);
 		HttpWebRequest GetAsync(Action<HttpResponse> action);

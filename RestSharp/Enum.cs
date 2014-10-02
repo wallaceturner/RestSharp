@@ -14,6 +14,8 @@
 //   limitations under the License. 
 #endregion
 
+using System;
+
 namespace RestSharp
 {
 	///<summary>
@@ -79,4 +81,17 @@ namespace RestSharp
 		TimedOut,
 		Aborted
 	}
+
+    #if SILVERLIGHT
+    /// <summary>
+    /// Represents the file compression and decompression encoding format to be used to compress the data received in response to an <see cref="T:System.Net.HttpWebRequest"/>.
+    /// </summary>
+    [Flags]
+    public enum DecompressionMethods
+    {
+        None = 0,
+        GZip = 1,
+        Deflate = 2,
+    }
+    #endif
 }

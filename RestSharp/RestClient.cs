@@ -340,7 +340,7 @@ namespace RestSharp
 
 			http.Url = BuildUri(request);
 			http.PreAuthenticate = PreAuthenticate;
-
+		    http.AutomaticDecompression = request.AutomaticDecompression;
 			var userAgent = UserAgent ?? http.UserAgent;
 			http.UserAgent = userAgent.HasValue() ? userAgent : "RestSharp/" + version;
 

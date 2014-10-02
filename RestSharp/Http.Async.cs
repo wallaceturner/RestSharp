@@ -421,7 +421,7 @@ namespace RestSharp
 				webRequest.ClientCertificates.AddRange(ClientCertificates);
 			}
 
-			webRequest.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip | DecompressionMethods.None;
+			webRequest.AutomaticDecompression = AutomaticDecompression;
 			ServicePointManager.Expect100Continue = false;
 
 			if (Timeout != 0)

@@ -246,6 +246,10 @@ namespace RestSharp
 		IRestRequest AddUrlSegment(string name, string value);
 
 		Action<IRestResponse> OnBeforeDeserialization { get; set; }
-		void IncreaseNumAttempts();
+        /// <summary>
+        /// Gets or sets the type of decompression that is used.
+        /// </summary>
+        DecompressionMethods AutomaticDecompression { get; set; }
+	    void IncreaseNumAttempts();
 	}
 }

@@ -68,6 +68,7 @@ namespace RestSharp
 			JsonSerializer = new JsonSerializer();
 
 			OnBeforeDeserialization = r => { };
+            AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip | DecompressionMethods.None;
 		}
 
 		/// <summary>
@@ -445,7 +446,12 @@ namespace RestSharp
 		/// </summary>
 		public Action<IRestResponse> OnBeforeDeserialization { get; set; }
 
-		/// <summary>
+        /// <summary>
+        /// Gets or sets the type of decompression that is used.
+        /// </summary>
+        public DecompressionMethods AutomaticDecompression { get; set; }
+
+	    /// <summary>
 		/// Used by the default deserializers to explicitly set which date format string to use when parsing dates.
 		/// </summary>
 		public string DateFormat { get; set; }
